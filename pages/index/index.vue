@@ -40,14 +40,33 @@
 			</view>
 		</view>
 		<!-- 导航条 -->
-	
-		<scroll-view scroll-x class="bg-white nav">
-			<view class="flex text-center">
-				<view class="cu-item flex-sub" :class="index==TabCur?'text-orange cur':''" v-for="(item,index) in index_nav" :key="index" @tap="tabSelect" :data-id="index">
-					{{item.name}}
+
+		<view class="index_nav">
+			<scroll-view scroll-x class=" nav">
+				<view class="flex text-center">
+					<view class="cu-item flex-sub" :class="index==TabCur?'text-orange cur':''" v-for="(item,index) in index_nav" :key="index"
+					 @tap="tabSelect" :data-id="index">
+						{{item.name}}
+					</view>
+				</view>
+				
+			</scroll-view>
+		</view>
+		<view class="nav_content">
+			<!-- 附近车次 -->
+			<view class="area red" v-if="TabCur==0">
+				<!--  -->
+				<view class="">
+					<view class="">
+						
+						<text>{{index_Place}}</text>
+					</view>
 				</view>
 			</view>
-		</scroll-view>
+			<view class="area green" v-else>
+				2
+			</view>
+		</view>
 	</view>
 </template>
 
@@ -56,6 +75,7 @@
 		data() {
 			return {
 				TabCur: 0,
+				index_Place:'理工三',
 				// 轮播图
 				swiperList: [{
 						id: 1,
@@ -69,14 +89,14 @@
 					},
 
 				],
-				index_nav:[{
+				index_nav: [{
 					id: 1,
-					name: '图书馆',
-					
-				},{
+					name: '附近车次',
+
+				}, {
 					id: 2,
-					name: '历史车次',
-					
+					name: '乘车记录',
+
 				}],
 				// 分类菜单
 				categoryList: [{
@@ -123,9 +143,9 @@
 	.index_all {
 		width: 100%;
 		height: 100%;
-
+		padding-top:30rpx;
 		.index_header {
-			margin-top: 100rpx;
+			margin-top: 10rpx;
 
 			.map {
 				margin: 0 5px 0 15upx;
@@ -195,6 +215,9 @@
 				font-size: 24upx;
 				color: #3c3c3c;
 			}
+		}
+		.index_nav{
+			width: 50%;
 		}
 	}
 </style>

@@ -29,4 +29,7 @@
 	.align-center {
 		align-items: center;
 	}
+	page{
+		background-color: #FFFFFF;
+	}
 </style>

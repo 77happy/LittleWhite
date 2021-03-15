@@ -9,7 +9,8 @@
 				"navigationBarTitleText": "",
 				
 				// 隐藏标题栏
-				"navigationStyle":"custom"
+				"navigationStyle":"custom",
+				"backgroundColor":"#FFFFFF"
 			}
 		}
 	    ,{
@@ -26,7 +27,7 @@
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
-		"backgroundColor": "#F8F8F8"
+		"backgroundColor": "#FFFFFF"
 	},
 	"tabBar":{
 		"selectedColor":"#007AFF",
