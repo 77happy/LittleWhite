@@ -41,14 +41,13 @@
 		</view>
 		<!-- 导航条 -->
 	
-		<!-- <scroll-view scroll-x class="bg-white nav">
+		<scroll-view scroll-x class="bg-white nav">
 			<view class="flex text-center">
-				<view class="cu-item flex-sub" :class="index==TabCur?'text-orange cur':''" v-for="(item,index) in 4"
-					:key="index" @tap="tabSelect" :data-id="index">
-					Tab{{index}}
+				<view class="cu-item flex-sub" :class="index==TabCur?'text-orange cur':''" v-for="(item,index) in index_nav" :key="index" @tap="tabSelect" :data-id="index">
+					{{item.name}}
 				</view>
 			</view>
-		</scroll-view> -->
+		</scroll-view>
 	</view>
 </template>
 
@@ -56,7 +55,7 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello',
+				TabCur: 0,
 				// 轮播图
 				swiperList: [{
 						id: 1,
@@ -70,6 +69,15 @@
 					},
 
 				],
+				index_nav:[{
+					id: 1,
+					name: '图书馆',
+					
+				},{
+					id: 2,
+					name: '历史车次',
+					
+				}],
 				// 分类菜单
 				categoryList: [{
 						id: 1,

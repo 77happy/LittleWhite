@@ -14,6 +14,8 @@
 
 <style lang="scss">
 	@import "uview-ui/index.scss";
+	@import "colorui/main.css";
+	@import "colorui/icon.css";d
 
 	/*每个页面公共css */
 	.flex {
